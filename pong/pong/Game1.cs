@@ -13,6 +13,9 @@ namespace pong
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
+		private Texture2D ball;
+		private Texture2D rodeSpeler;
+		private Texture2D blauweSpeler;
 
 		public Game1()
 		{
@@ -42,9 +45,9 @@ namespace pong
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch(GraphicsDevice);
 
-			Texture2D ball = this.Content.Load<Texture2D>("sprites/bal");
-			Texture2D rodeSpeler = this.Content.Load<Texture2D>("sprites/rodeSpeler");
-			Texture2D blauweSpeler = this.Content.Load<Texture2D>("sprites/blauweSpeler");
+			ball = this.Content.Load<Texture2D>("sprites/bal");
+			rodeSpeler = this.Content.Load<Texture2D>("sprites/rodeSpeler");
+			blauweSpeler = this.Content.Load<Texture2D>("sprites/blauweSpeler");
 		}
 
 		/// <summary>
@@ -75,8 +78,10 @@ namespace pong
 			graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
 
 			//TODO: Add your drawing code here
-
+			spriteBatch.Begin();
+			spriteBatch.Draw(ball, new Vector2(400, 240), Color.White);
 			base.Draw(gameTime);
+			spriteBatch.End();
 		}
 	}
 }
