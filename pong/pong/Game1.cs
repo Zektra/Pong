@@ -42,7 +42,9 @@ namespace pong
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch(GraphicsDevice);
 
-			//TODO: use this.Content to load your game content here 
+			Texture2D ball = this.Content.Load<Texture2D>("sprites/bal");
+			Texture2D rodeSpeler = this.Content.Load<Texture2D>("sprites/rodeSpeler");
+			Texture2D blauweSpeler = this.Content.Load<Texture2D>("sprites/blauweSpeler");
 		}
 
 		/// <summary>

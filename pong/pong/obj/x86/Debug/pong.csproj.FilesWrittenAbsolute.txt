@@ -16,3 +16,6 @@
 /home/kevin/Projects/pong/pong/obj/x86/Debug/pong.exe
 /home/kevin/Projects/pong/pong/obj/x86/Debug/pong.pdb
 /home/kevin/Projects/pong/pong/bin/Debug/MonoGame.Framework.dll
+/home/kevin/Projects/pong/pong/bin/Debug/Content/sprites/bal.xnb
+/home/kevin/Projects/pong/pong/bin/Debug/Content/sprites/blauweSpeler.xnb
+/home/kevin/Projects/pong/pong/bin/Debug/Content/sprites/rodeSpeler.xnb

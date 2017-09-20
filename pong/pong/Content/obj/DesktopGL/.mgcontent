@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/kevin/Projects/pong/pong/Content/sprites/bal.png</File>
+    <File>/home/kevin/Projects/pong/pong/Content/sprites/blauweSpeler.png</File>
+    <File>/home/kevin/Projects/pong/pong/Content/sprites/rodeSpeler.png</File>
+  </SourceFiles>
+</SourceFileCollection>
