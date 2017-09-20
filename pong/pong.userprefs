@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{74B97471-2DA2-4C0D-8662-6DE0964B7BFF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="pong/Game1.cs">
+    <Files>
+      <File FileName="pong/Game1.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.pong PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
