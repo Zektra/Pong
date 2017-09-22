@@ -19,3 +19,4 @@
 /home/kevin/Projects/Pong/Pong/bin/Debug/Content/bal.xnb
 /home/kevin/Projects/Pong/Pong/bin/Debug/Content/blauweSpeler.xnb
 /home/kevin/Projects/Pong/Pong/bin/Debug/Content/rodeSpeler.xnb
+/home/kevin/Projects/Pong/Pong/bin/Debug/Content/hart.xnb
