@@ -17,6 +17,7 @@ namespace Pong
         GameTime GameTime = new GameTime();
         Bar player1, player2;
         Ball ball;
+		Hart hart;
         int screenWidth = 1280;
         int screenHeight = 720;
         Random randgen;
@@ -39,6 +40,17 @@ namespace Pong
             ball = new Ball(new Vector2(screenWidth / 2, screenHeight / 2), tempdirection, 0.5f, balltex, Vector2.One);
         }
 
+		void DrawLifes(int lifes1, int lifes2) {
+			for (int i = 0; i < lifes1; i++)
+			{
+				hart = new Hart(new Vector2(harttex.Width / 2 + harttex.Width * i, harttex.Height / 2), harttex, Vector2.One);
+			}
+			for (int i = 0; i < lifes2; i++)
+			{
+				hart = new Hart(new Vector2(screenHeight - harttex.Width / 2 + harttex.Width * i, harttex.Height / 2), harttex, Vector2.One);
+			}
+		}
+
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
@@ -52,7 +64,8 @@ namespace Pong
             base.Initialize();
 
             player1 = new Bar(new Vector2(speler1tex.Width/2,screenHeight/2), Vector2.One, speler1tex);
-            player2 = new Bar(new Vector2(screenWidth - speler2tex.Width/2, screenHeight/2), Vector2.One, speler2tex);
+			player2 = new Bar(new Vector2(screenWidth - speler2tex.Width / 2, screenHeight / 2), Vector2.One, speler2tex);
+			DrawLifes(1, 1);
             BuildNewBall();
         }
 
@@ -106,8 +119,8 @@ namespace Pong
                 ball.direction.X = -ball.direction.X;
             if (ball.position.X + ball.tex.Width / 2 > screenWidth - player1.tex.Width && ball.position.Y <= player2.position.Y + player2.tex.Height / 2 * player2.size.Y && ball.position.Y >= player2.position.Y - player2.tex.Height / 2 * player2.size.Y && ball.direction.X > 0)
                 ball.direction.X = -ball.direction.X;
-            if (ball.position.X >= screenWidth)
-                BuildNewBall();
+			if (ball.position.X >= screenWidth)
+				BuildNewBall();
             if (ball.position.X <= 0)
                 BuildNewBall();
             if (ball.position.Y <= 0 + ball.tex.Height/2 * ball.size.Y)
@@ -133,7 +146,8 @@ namespace Pong
             spriteBatch.Begin();
             spriteBatch.Draw(player1.tex, player1.position, null, Color.White, 0, player1.origin, player1.size, SpriteEffects.None, 0);
             spriteBatch.Draw(player2.tex, player2.position, null, Color.White, 0, player2.origin, player2.size, SpriteEffects.None, 0);
-            spriteBatch.Draw(ball.tex, ball.position, null, Color.White, 0, ball.origin, ball.size, SpriteEffects.None,0);
+            spriteBatch.Draw(ball.tex, ball.position, null, Color.White, 0, ball.origin, ball.size, SpriteEffects.None, 0);
+			spriteBatch.Draw(hart.tex, hart.position, null, Color.White, 0, hart.origin, hart.size, SpriteEffects.None, 0);
             spriteBatch.End();
             // TODO: Add your drawing code here
 
@@ -172,4 +186,17 @@ namespace Pong
             origin = new Vector2(tex.Width / 2, tex.Height / 2);
         }
     }
+	public class Hart {
+		public Vector2 position;
+		public Texture2D tex;
+		public Vector2 size;
+		public Vector2 origin;
+		public Hart(Vector2 position_, Texture2D tex_, Vector2 size_)
+		{
+			position = position_;
+			tex = tex_;
+			size = size_;
+			origin = new Vector2(tex.Width / 2, tex.Height / 2);
+		}
+	}
 }
