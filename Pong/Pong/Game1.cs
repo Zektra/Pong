@@ -66,7 +66,7 @@ namespace Pong
             spriteBatch = new SpriteBatch(GraphicsDevice);
             speler1tex = Content.Load<Texture2D>("blauweSpeler");
             speler2tex = Content.Load<Texture2D>("rodeSpeler");
-            balltex = Content.Load<Texture2D>("Bal");
+            balltex = Content.Load<Texture2D>("bal");
             // TODO: use this.Content to load your game content here
         }
 
